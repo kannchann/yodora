@@ -1,0 +1,18 @@
+//theme colors
+$primary: hsla(0, 0%, 96%, 1);
+$secondary: hsla(267, 10%, 17%, 1);
+$tertiary: hsla(36, 100%, 65%, 1);
+
+
+//spacing
+$base-padding: 0.75rem;
+$base-marging: 0.75 rem;
+
+
+//breakpoints
+$xl: 87.5em; // 4k and hi-res desktop
+$lg: 60em; // 1080 and hi-res laptops
+$med: 40em; // hi-res tablets and low-res laptops
+$sm: 28em; // mobile and low-res tablets
+$xs: 20em; // mobile only
+
