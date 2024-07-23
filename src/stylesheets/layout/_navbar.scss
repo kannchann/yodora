@@ -1,30 +1,64 @@
-@use 'abstracts' as *;
+@use "abstracts" as *;
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    .navbar-toggle{
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  #navbar-menu {
+    display: flex;
+  }
+
+  .navbar-menu {
+    display: flex; // Ensures items are displayed in a row
+    flex-direction: row;
+  }
+
+  .navbar-link {
+    margin: 0 10px; // Adds horizontal spacing between items
+    @media (min-width: 768px) and (max-width: 1024px) {
+      margin: 0 8px;}
+  }
+
+  
+}
+
+// Media Queries for responsiveness
+@media (max-width: 768px) {
+
+  .navbar{
+   
+    .navbar-toggle {
+      display: block; // Show hamburger icon on small screens
+    }
+
+    #navbar-menu{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     
+      .navbar-menu{
         display: none;
     }
-   
-    #navbar-menu{
-        display: flex;
-    }
-   
-    .navbar-menu {
-      display: flex; // Ensures items are displayed in a row
-      flex-direction: row;
-  
-    }
-
-    .navbar-link {
-      margin: 0 10px; // Adds horizontal spacing between items
-    }
-
-    @include responsive($sm){
 
     }
+    }
+    .navbar-actions {
+      display: none; // Hide actions on small screens
+    }
+
   }
-  
+
