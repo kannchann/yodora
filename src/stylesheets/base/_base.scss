@@ -1,0 +1,27 @@
+@use 'abstracts' as *;
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: $primary;
+    color: $secondary;
+    font-family: "Poppins", sans-serif;;
+
+    .container{
+        padding: $base-padding;
+      
+
+    }
+    a{
+        text-decoration: none;
+        color:$secondary;
+
+    }
+
+    li{
+        list-style: none;
+    }
+
+}
+
+

@@ -1,8 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.button {
-  color: hsl(36, 100%, 65%);
+* {
+  box-sizing: border-box;
 }
 
-.button {
-  color: hsl(36, 100%, 65%);
+body {
+  background-color: hsl(0, 0%, 96%);
+  color: hsl(267, 10%, 17%);
+  font-family: "Poppins", sans-serif;
+}
+body .container {
+  padding: 2rem 6rem;
+}
+body a {
+  text-decoration: none;
+  color: hsl(267, 10%, 17%);
+}
+body li {
+  list-style: none;
+}
+
+.primary-button {
+  background-color: hsl(267, 10%, 17%);
+  padding: 16px 32px 16px 32px;
+  color: white;
+  border: none;
+  border-radius: 100px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .navbar-toggle {
+  display: none;
+}
+.navbar #navbar-menu {
+  display: flex;
+}
+.navbar .navbar-menu {
+  display: flex;
+  flex-direction: row;
+}
+.navbar .navbar-link {
+  margin: 0 10px;
 }

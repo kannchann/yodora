@@ -1,5 +1,12 @@
-@use 'abstracts';
+@use 'abstracts'as *;
 
-.button{
-    color:abstracts.$tertiary;
+.primary-button{
+
+    background-color: $secondary;
+    padding: 16px 32px 16px 32px;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    
+
 }

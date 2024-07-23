@@ -1,0 +1,30 @@
+@use 'abstracts' as *;
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navbar-toggle{
+        display: none;
+    }
+   
+    #navbar-menu{
+        display: flex;
+    }
+   
+    .navbar-menu {
+      display: flex; // Ensures items are displayed in a row
+      flex-direction: row;
+  
+    }
+
+    .navbar-link {
+      margin: 0 10px; // Adds horizontal spacing between items
+    }
+
+    @include responsive($sm){
+
+    }
+  }
+  

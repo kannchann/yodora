@@ -1,5 +1,7 @@
 @use 'variables' as *;
 
-.button{
-    color:$tertiary;
+@mixin responsive($query) {
+    @media ( min-width: #{$query} ) {
+        @content;
+    }
 }
