@@ -3,15 +3,17 @@
 
 .hero-section {
   @include d-flex(column,start, start);
-  // height: 100vh;
-  margin-top:40px;
+  // @include large-screen-responsive(1024px){
+  //   margin-top:40px;
+  // }
+
+  height: 100vh;
    .hero__contents{
     @include d-flex($main-axis:space-between,$wrap:wrap);
     margin-left: auto;
     @include small-screen-responsive(768px){
       margin-bottom: 4rem;
     }
-    
     h1 {
       @media (min-width: 768px) {
         width: 80%;
