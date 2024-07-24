@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 h1 {
   font-weight: 700;
+  font-size: clamp(1.5em, 8vw, 4.5em);
+}
+@media (min-width: 1024px) {
+  h1 {
+    line-height: 80px;
+  }
 }
 
 h2 {
@@ -23,25 +29,36 @@ a {
   font-weight: 500;
 }
 
-* {
+*, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
 }
 
-body {
+html {
+  scroll-behavior: smooth;
+}
+html body {
   background-color: hsl(0, 0%, 96%);
   color: hsl(267, 10%, 17%);
   font-family: "Poppins", sans-serif;
 }
-body .container {
-  padding: 2rem 3rem;
+html body .container {
+  padding: 2rem 6rem;
 }
-body a {
+@media (max-width: 756px) {
+  html body .container {
+    padding: 2rem;
+  }
+}
+html body a {
   text-decoration: none;
   color: hsl(267, 10%, 17%);
 }
-body li {
+html body li {
   list-style: none;
+}
+html body .highlight {
+  color: hsl(36, 100%, 65%);
 }
 
 .primary-button {
@@ -84,7 +101,7 @@ body li {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 756px) {
   .navbar .navbar-toggle {
     display: block;
   }
@@ -100,4 +117,49 @@ body li {
   .navbar-actions {
     display: none;
   }
+}
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  margin-top: 40px;
+}
+.hero-section .hero__contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+@media (max-width: 768px) {
+  .hero-section .hero__contents {
+    margin-bottom: 4rem;
+  }
+}
+@media (min-width: 768px) {
+  .hero-section .hero__contents h1 {
+    width: 80%;
+  }
+}
+.hero-section .hero__contents img {
+  width: 20%;
+  height: auto;
+  margin-left: auto;
+}
+
+.about-section {
+  background-color: hsl(267, 10%, 17%);
+}
+.about-section .container .image__placeholder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.about-section .container .image__placeholder img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }

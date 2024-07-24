@@ -1,7 +1,20 @@
 @use 'variables' as *;
 
-@mixin responsive($query) {
-    @media ( min-width: #{$query} ) {
+@mixin small-screen-responsive($query) {
+    @media ( max-width: $query ) {
         @content;
     }
 }
+@mixin large-screen-responsive($query) {
+    @media ( min-width: $query ) {
+        @content;
+    }
+}
+
+@mixin d-flex($layout:row, $main-axis:center, $cross-axis:center, $wrap:nowrap ) {
+    display: flex;
+    flex-direction: $layout;
+    justify-content: $main-axis;
+    align-items: $cross-axis;
+    flex-wrap: $wrap;
+  }

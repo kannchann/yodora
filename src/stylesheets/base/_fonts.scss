@@ -4,6 +4,11 @@
 
 h1{
     font-weight: $bold;
+    font-size: clamp(1.5em,8vw,4.5em);
+    @media(min-width: 1024px){
+        line-height: 80px
+    }
+    
 }
 
 h2{
