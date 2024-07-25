@@ -1,26 +1,32 @@
-@use 'abstracts' as *;
+// @use 'abstracts' as *;
 
 
-.about-section {
-    background-color: $secondary;
-    height: 100vh;
+// .about-section {
+//     background-color: $secondary;
+//     height: 100vh;
     
-    .container {
-      .image__placeholder {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        img {
-          position: absolute;
-          top: -50vh;
-          @include small-screen-responsive(756px){
-            top:-10vh
-          }
-          width: 100%;
-          height: auto;
-          max-width: 100%;
-        }
-      }
-    }
-  }
+//     .container {
+//       .image__placeholder {
+//         width: 100%;
+//         display: flex;
+//         justify-content: center;
+//         position: relative;
+//         img {
+//           position: absolute;
+//           top: -50vh;
+//           @include small-screen-responsive(756px){
+//             top:-10vh
+//           }
+//           width: 100%;
+//           height: auto;
+//           max-width: 100%;
+//         }
+//       }
+
+//       .about__contents{
+//         margin-top: 25rem;
+//         color: white;
+//       }
+      
+//     }
+//   }

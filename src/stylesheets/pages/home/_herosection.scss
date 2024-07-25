@@ -1,42 +1,25 @@
 @use "abstracts" as *;
 
+.hero-section{
+   @include d-flex($main-axis:start,$wrap:wrap);  
+   h1 {
+          @media (min-width: 1024px) {
+            width: 70%;
+          }
+        }
+    img{
+        margin-left: auto;
+    } 
+   
+}
 
-.hero-section {
-  @include d-flex(column,start, start);
-  // @include large-screen-responsive(1024px){
-  //   margin-top:40px;
-  // }
-
-  height: 100vh;
-   .hero__contents{
-    @include d-flex($main-axis:space-between,$wrap:wrap);
-    margin-left: auto;
-    @include small-screen-responsive(768px){
-      margin-bottom: 4rem;
-    }
-    h1 {
-      @media (min-width: 768px) {
-        width: 80%;
-      }
-    }
-    img {
-      width: 20%;
-      height: auto;
-      margin-left: auto;
-  
-    }
-
+.image-holder{
+  background: conic-gradient($primary 0deg 90deg, $secondary 90deg 270deg, $primary 270deg 360deg);
+  .image-container{
+    width: 100%;
   }
 
-  // .image__placeholder{
-  //   img{
 
-  //     width: 100%;
-  //     height: auto;
-  //   }
-    
-  // }
-
-
-  
 }
+
+

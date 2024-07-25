@@ -2,11 +2,7 @@
 h1 {
   font-weight: 700;
   font-size: clamp(1.5em, 8vw, 4.5em);
-}
-@media (min-width: 1024px) {
-  h1 {
-    line-height: 80px;
-  }
+  line-height: clamp(1rem, 8vw, 5rem);
 }
 
 h2 {
@@ -16,6 +12,7 @@ h2 {
 
 h3 {
   font-weight: 700;
+  font-size: clamp(1em, 8vw, 3.5rem);
 }
 
 h4 {
@@ -24,6 +21,7 @@ h4 {
 
 h5, h6 {
   font-weight: 700;
+  font-size: clamp(1rem, 8vw, 2em);
 }
 
 a {
@@ -33,6 +31,7 @@ a {
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 html {
@@ -122,55 +121,40 @@ html body .highlight {
 }
 .hero-section {
   display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  flex-wrap: nowrap;
-  height: 100vh;
-}
-.hero-section .hero__contents {
-  display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   flex-wrap: wrap;
-  margin-left: auto;
 }
-@media (max-width: 768px) {
-  .hero-section .hero__contents {
-    margin-bottom: 4rem;
+@media (min-width: 1024px) {
+  .hero-section h1 {
+    width: 70%;
   }
 }
-@media (min-width: 768px) {
-  .hero-section .hero__contents h1 {
-    width: 80%;
-  }
-}
-.hero-section .hero__contents img {
-  width: 20%;
-  height: auto;
+.hero-section img {
   margin-left: auto;
 }
 
-.about-section {
-  background-color: hsl(267, 10%, 17%);
-  height: 100vh;
+.image-holder {
+  background: conic-gradient(hsl(0, 0%, 96%) 0deg 90deg, hsl(267, 10%, 17%) 90deg 270deg, hsl(0, 0%, 96%) 270deg 360deg);
 }
-.about-section .container .image__placeholder {
+.image-holder .image-container {
+  width: 100%;
+}
+
+.banner {
+  background-color: hsl(267, 10%, 17%);
+  border-radius: 2rem;
+  color: white;
+  text-align: center;
   width: 100%;
   display: flex;
-  justify-content: center;
-  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
 }
-.about-section .container .image__placeholder img {
-  position: absolute;
-  top: -50vh;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-}
-@media (max-width: 756px) {
-  .about-section .container .image__placeholder img {
-    top: -10vh;
-  }
+.banner .primary-button {
+  background-color: hsl(36, 100%, 65%);
+  color: hsl(267, 10%, 17%);
 }

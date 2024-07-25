@@ -1,0 +1,14 @@
+@use 'abstracts' as *;
+
+.banner{
+    background-color: $secondary;
+    border-radius: 2rem;
+    color: white;
+    text-align: center;
+    width: 100%;
+    @include d-flex(column, $main-axis:space-between );
+    .primary-button{
+        background-color: $tertiary;
+        color: $secondary;
+    }
+}
