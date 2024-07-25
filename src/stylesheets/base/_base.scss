@@ -16,6 +16,8 @@ html{
         .container{
             padding: $base-padding;
             width: 100%;
+            // max-width: 1220px;
+            // margin: 0 auto;
             @include small-screen-responsive(756px){
                 padding: 2rem;
             }

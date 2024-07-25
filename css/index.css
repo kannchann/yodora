@@ -8,11 +8,13 @@ h1 {
 h2 {
   font-weight: 700;
   font-size: clamp(1em, 8vw, 4em);
+  line-height: clamp(1rem, 8vw, 4.5rem);
 }
 
 h3 {
   font-weight: 700;
   font-size: clamp(1em, 8vw, 3.5rem);
+  line-height: clamp(0.5rem, 8vw, 4rem);
 }
 
 h4 {
@@ -26,6 +28,11 @@ h5, h6 {
 
 a {
   font-weight: 500;
+}
+
+p {
+  font-weight: 400;
+  font-size: clamp(0.5em, 8vw, 1rem);
 }
 
 *, ::before, ::after {
@@ -142,9 +149,116 @@ html body .highlight {
   width: 100%;
 }
 
+.about {
+  background-color: hsl(267, 10%, 17%);
+  color: white;
+}
+@media (max-width: 768px) {
+  .about h2 {
+    font-weight: 500;
+  }
+}
+.about h2 span::after {
+  content: "\a";
+  white-space: pre;
+}
+.about .img-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 4rem 0;
+}
+@media (max-width: 768px) {
+  .about .img-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+.about .about__numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+@media (max-width: 768px) {
+  .about .about__numbers {
+    flex-direction: column;
+  }
+}
+.about .about__numbers .flex-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: clamp(1rem, 8vw, 3rem);
+}
+@media (max-width: 768px) {
+  .about .about__numbers .flex-div {
+    flex-direction: column;
+  }
+}
+.about .about__numbers .item > div {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.about .about__numbers .marketplace-button {
+  border: none;
+  background-color: hsl(267, 10%, 17%);
+}
+.about .about__numbers .marketplace-button a {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+  gap: 2rem;
+}
+.features .features__details {
+  gap: 1rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: nowrap;
+}
+@media (max-width: 756px) {
+  .features .features__details {
+    width: 100%;
+  }
+}
+.features .grid {
+  width: 55%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(286px, 1fr));
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .features .grid {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .banner {
   background-color: hsl(267, 10%, 17%);
   border-radius: 2rem;
+  padding: 4.5rem;
+  gap: 2rem;
   color: white;
   text-align: center;
   width: 100%;

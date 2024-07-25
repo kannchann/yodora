@@ -12,11 +12,16 @@ h1{
 
 h2{
     font-weight: $bold;
-    font-size: clamp(1em,8vw,4em);;
+    font-size: clamp(1em,8vw,4em);
+    line-height: clamp(1rem,8vw,4.5rem);
+
 }
 h3{
     font-weight: $bold;
-    font-size: clamp(1em,8vw,3.5rem);;
+    font-size: clamp(1em,8vw,3.5rem);
+    line-height: clamp(0.5rem,8vw,4rem);
+
+
 }
 h4{
     font-weight: $medium;
@@ -27,6 +32,11 @@ h5,h6{
 }
 a{
     font-weight: $medium;
+}
+
+p{
+    font-weight: 400;
+    font-size: clamp(0.5em,8vw,1rem);;;
 }
 
 

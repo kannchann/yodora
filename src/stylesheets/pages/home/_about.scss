@@ -1,32 +1,67 @@
-// @use 'abstracts' as *;
+@use 'abstracts' as *;
 
-
-// .about-section {
-//     background-color: $secondary;
-//     height: 100vh;
+.about{
+    background-color: $secondary;
+    color: white;
     
-//     .container {
-//       .image__placeholder {
-//         width: 100%;
-//         display: flex;
-//         justify-content: center;
-//         position: relative;
-//         img {
-//           position: absolute;
-//           top: -50vh;
-//           @include small-screen-responsive(756px){
-//             top:-10vh
-//           }
-//           width: 100%;
-//           height: auto;
-//           max-width: 100%;
-//         }
-//       }
+    h2 {
+        @media(max-width:768px){
+            font-weight: 500;
+        }
+            span::after{
+                content: "\a";
+                white-space: pre;
+            }
+        }
+        .img-card{
+            @include d-flex($wrap:wrap,$main-axis:start);
+            gap:1.5rem;
+            padding: 4rem 0;
+            img{
+                @media(max-width:768px){
+                    width: 100%;
+                    height: auto;
+                }
+              
+            }
+        }
 
-//       .about__contents{
-//         margin-top: 25rem;
-//         color: white;
-//       }
-      
-//     }
-//   }
+        .about__numbers{
+            @include d-flex($wrap:wrap,$main-axis:space-between);
+            gap: 4rem;
+            @media (max-width:768px) {
+                flex-direction: column;
+            }
+            .flex-div{
+                @include d-flex($main-axis:space-between);
+                gap: clamp(1rem,8vw,3rem);
+                @media (max-width:768px) {
+                    flex-direction: column;
+                }
+
+            }
+            .item>div{
+                font-size: 3rem;
+                font-weight: $bold;
+            }
+            .marketplace-button{
+                border: none;
+                background-color:$secondary ;
+                a{
+                    color: white;
+                   text-align: center;
+                   font-size: 1.5rem;
+                   cursor: pointer;
+                   
+                     
+
+               
+                }
+
+            }
+            
+        }
+        
+      }
+
+

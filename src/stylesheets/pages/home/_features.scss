@@ -1,3 +1,28 @@
-// .grid{
-//     display: grid;
-// }
+@use 'abstracts' as *;
+
+
+.features{
+    @include d-flex($cross-axis:start,$main-axis: space-between, $wrap:wrap);
+    margin: 3rem 0;
+    gap: 2rem;
+
+    .features__details{
+        gap: 1rem;
+        width: 40%;
+        @include d-flex($layout: column,$cross-axis:start,$main-axis: space-between);
+        @media (max-width:756px) {
+            width: 100%;
+            
+        }
+    }
+    .grid{
+        width: 55%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(286px, 1fr));
+        gap:1.5rem;
+        @media (max-width:768px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
