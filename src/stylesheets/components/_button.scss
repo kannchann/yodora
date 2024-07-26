@@ -1,12 +1,17 @@
 @use 'abstracts'as *;
 
 .primary-button{
-
+    cursor: pointer;
     background-color: $secondary;
     padding: 16px 32px 16px 32px;
     color: white;
     border: none;
     border-radius: 100px;
+    transition: background-color .4s ease-in-out, color .4s ease-in-out;
     
+}
 
+.primary-button:hover{
+    background-color: $tertiary;
+    color: $secondary;
 }

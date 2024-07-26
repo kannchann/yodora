@@ -20,11 +20,13 @@
             img{
                 width: calc(33.333% - 1rem);
                 height: auto;
+                object-fit: cover;
                 @media (max-width:768px){
                     width: 100%;
                 }
               
             }
+    
         }
 
         .about__numbers{
