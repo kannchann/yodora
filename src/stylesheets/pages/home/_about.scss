@@ -18,9 +18,10 @@
             gap:1.5rem;
             padding: 4rem 0;
             img{
-                @media(max-width:768px){
+                width: calc(33.333% - 1rem);
+                height: auto;
+                @media (max-width:768px){
                     width: 100%;
-                    height: auto;
                 }
               
             }
@@ -31,6 +32,7 @@
             gap: 4rem;
             @media (max-width:768px) {
                 flex-direction: column;
+                text-align: center;
             }
             .flex-div{
                 @include d-flex($main-axis:space-between);
@@ -39,6 +41,7 @@
                     flex-direction: column;
                 }
 
+              
             }
             .item>div{
                 font-size: 3rem;
@@ -47,6 +50,10 @@
             .marketplace-button{
                 border: none;
                 background-color:$secondary ;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 210px;
                 a{
                     color: white;
                    text-align: center;
