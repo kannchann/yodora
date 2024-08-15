@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+ 
 
   .navbar-toggle {
     display: none;
@@ -28,16 +29,25 @@
   }
 
   .navbar-link {
-    margin: 0 10px; // Adds horizontal spacing between items
+    margin: 0 10px; 
+    transition: .4s ease-in-out;
     @media (min-width: 768px) and (max-width: 1024px) {
-      margin: 0 8px;}
+      margin: 0 5px;}
+
+  }
+  .navbar-link:hover{
+    border-bottom: solid 3px $tertiary ;
+  }
+  .navbar-actions{
+    margin-left: 0;
+    
   }
 
   
 }
 
 // Media Queries for responsiveness
-@include small-screen-responsive(756px) {
+@include small-screen-responsive(768px) {
 
   .navbar{
    

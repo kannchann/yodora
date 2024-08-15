@@ -1,0 +1,12 @@
+@use 'abstracts'as *;
+
+.link-to-instagram{
+    position: absolute;
+    bottom: 2.25rem;
+    left: 2rem;
+    z-index: 1;
+    color: white;
+    background-color: $link;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
